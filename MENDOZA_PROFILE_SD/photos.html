@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photos - Personal Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      border-bottom: 2px solid #000;
+      background: #fff;
+    }
+
+    header nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px;
+      background: #fff;
+      margin: 20px;
+      border: 1px solid #ddd;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      justify-items: center;
+    }
+
+    .photo-item {
+      border: 2px solid #333;
+      overflow: hidden;
+      background: #f0f0f0;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
+      color: #666;
+      margin: 0 auto;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-categories {
+      margin-bottom: 30px;
+    }
+
+    .category-item {
+      margin: 15px 0;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 4px solid #333;
+    }
+
+    .category-item h3 {
+      margin: 0 0 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid black;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div><strong>All About Me</strong></div>
+  <nav>
+    <a href="personal.html">Personal</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="social.html">Social</a>
+    <a href="photos.html">Photos</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h1>My Photos</h1>
+  <p>Here's a collection of my favorite photos from various moments in my life.</p>
+
+  <div class="photo-categories">
+    <div class="category-item">
+      <h3>👥 Friends & Loved Ones</h3>
+      <p>Precious moments spent with the people I care about most.</p>
+    </div>
+
+    <div class="category-item">
+      <h3>🎉 Events</h3>
+      <p>Captured moments from various events, celebrations, and adventures.</p>
+    </div>
+
+
+  <h2>Photo Gallery</h2>
+  <div class="photo-gallery">
+    <div class="photo-item">
+      <img src="photo1.png" alt="Photo 1">
+    </div>
+    <div class="photo-item">
+      <img src="photo2.png" alt="Photo 2">
+    </div>
+    <div class="photo-item">
+      <img src="photo3.png" alt="Photo 3">
+    </div>
+    <div class="photo-item">
+      <img src="photo4.png" alt="Photo 4">
+    </div>
+    <div class="photo-item">
+      <img src="photo5.png" alt="Photo 5">
+    </div>
+    <div class="photo-item">
+      <img src="photo6.png" alt="Photo 6">
+    </div>
+    <div class="photo-item">
+      <img src="photo7.png" alt="Photo 7">
+    </div>
+    <div class="photo-item">
+      <img src="photo8.png" alt="Photo 8">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Mendoza, Israel James R.</p>
+</footer>
+
+</body>
+</html>
