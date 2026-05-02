@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alfrancine Rosima Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#0f0f14;
+    color:white;
+}
+
+/* TOP HERO */
+.hero{
+    height:300px;
+    background:linear-gradient(120deg,#ff4da6,#7b2cff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    margin-top:5px;
+}
+
+/* PROFILE IMAGE */
+.profile{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    overflow:hidden;
+    border:4px solid white;
+    margin-top:-75px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* MAIN */
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+/* CARD */
+.card{
+    background:#1a1a24;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+/* TITLES */
+h2{
+    color:#ff4da6;
+    margin-bottom:10px;
+}
+
+/* SLIDESHOW */
+.slideshow{
+    width:100%;
+    height:400px;
+    background:black;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    margin-top:10px;
+}
+
+.slideshow img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:none;
+}
+
+.slideshow img.active{
+    display:block;
+}
+
+/* BUTTONS */
+.controls{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    display:flex;
+    gap:10px;
+}
+
+button{
+    background:#ff4da6;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* SKILLS */
+.skills span{
+    display:inline-block;
+    margin:5px;
+    padding:5px 10px;
+    border:1px solid #ff4da6;
+    border-radius:20px;
+}
+
+/* SOCIALS */
+.socials{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:10px;
+}
+
+.socials a{
+    text-decoration:none;
+    color:white;
+    border:1px solid #ff4da6;
+    padding:8px 10px;
+    border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>Alfrancine G. Rosima</h1>
+<p>PHONE: 09099112926</p>
+<p>ADDRESS: Tanauan City Batangas</p>
+<p>HIRE FOR: Web Development, Programming, Technical Support, Networking</p>
+</div>
+
+<div class="profile">
+<img src="profile.jpg">
+</div>
+
+<div class="container">
+
+<div class="card">
+<div class="socials">
+<a href="https://github.com/2320973-commits">GITHUB</a>
+<a href="https://www.facebook.com/anccineeee">FACEBOOK</a>
+<a href="https://www.instagram.com/whynot.iska/">INSTAGRAM</a>
+<a href="mailto:2320973@ub.edu.ph">EMAIL</a>
+</div>
+</div>
+
+<div class="card">
+<h2>ABOUT ME:</h2>
+<p>I am Alfrancine G. Rosima, based in Tanauan City, Batangas. I am passionate about technology, especially in computer systems, networking, and programming, and I enjoy continuously learning and improving my technical skills.</p>
+</div>
+
+<div class="card">
+<h2>FEATURE PROJECTS:</h2>
+
+<h3>MICROPROCCESOR</h3>
+<h3>Embedded System & low-level Programing</h3>
+<p>Embedded Systems & Low-Level Programming Studied the inner workings of microprocessors, including architecture design and assembly-level coding. Developed practical skills in integrating hardware with software, using emulation tools and applying optimization techniques to enhance system performance.</p>
+
+<div class="slideshow" id="slide1">
+<img src="micro1.jpg" class="active">
+<img src="micro2.jpg">
+<img src="micro3.jpg">
+
+<div class="controls">
+<button onclick="prev('slide1')">Prev</button>
+<button onclick="next('slide1')">Next</button>
+</div>
+</div>
+
+<br>
+
+<h3>24&SC & Logic Circuit</h3>
+<h3>Digital logic & circuit design</h3>
+<p>Created and tested digital systems using 24SC components and fundamental logic gates. Applied Boolean algebra to analyze and simplify circuits, while exploring optimization methods and core signal processing concepts to improve overall functionality.</p>
+
+<div class="slideshow" id="slide2">
+<img src="logic1.jpg" class="active">
+<img src="logic2.jpg">
+<img src="logic3.jpg">
+<img src="logic4.jpg">
+
+<div class="controls">
+<button onclick="prev('slide2')">Prev</button>
+<button onclick="next('slide2')">Next</button>
+</div>
+</div>
+
+</div>
+
+<div class="card">
+<h2>EDUCATION</h2>
+<p>University of Batangas Lipa Campus (2023 – Present)</p>
+<p><b>Key Coursework :</b> Computer Programming, Computer Networks, Data Structures and Algorithms, Digital Logic, Computer Organization</p>
+<p><b>Notable Projects :</b> Calculator Program, Student Information System, LAN Setup, Simple Website, Arduino LED Project</p>
+</div>
+
+<div class="card">
+<h2>HOBBIES</h2>
+
+<p>Watching movies</p>
+<p>I watch movies for entertainment and relaxation, and to enjoy different stories and ideas.</p>
+
+<p>Listening to music</p>
+<p>I listen to music to relax, improve my mood, and help me focus while studying or working.</p>
+
+<p>Browsing the internet</p>
+<p>I browse the internet to learn new things, stay updated, and explore useful information.</p>
+
+</div>
+
+<div class="card">
+<h2>SKILLS</h2>
+
+<div class="skills">
+<span>Programming Basics</span>
+<span>Computer Networking</span>
+<span>AI Training Basics</span>
+</div>
+
+<p>Programming Basics – Able to write simple programs using languages like C, C++, or Java to solve basic problems.</p>
+<p>Computer Networking – Understands basic network setup and configuration, including LAN connections and troubleshooting.</p>
+<p>AI Training Basics – Familiar with basic AI concepts and training models using simple datasets and tools.</p>
+
+</div>
+
+<div class="card">
+<h2>CERTIFICATIONS</h2>
+<p>Cisco CCNA Issuing Organization: Cisco Networking Academy</p>
+<p>Date Earned: Janua™ 2026 Skills</p>
+<p>Validated: VLAN configuration • Switching concepts • Network troubleshooting • Routing protocols</p>
+<p>Validity: Valid until January 2029</p>
+</div>
+
+</div>
+
+<script>
+function next(id){
+let slides=document.querySelectorAll(`#${id} img`);
+let i=0;
+slides.forEach((img,index)=>{
+if(img.classList.contains("active")) i=index;
+img.classList.remove("active");
+});
+slides[(i+1)%slides.length].classList.add("active");
+}
+
+function prev(id){
+let slides=document.querySelectorAll(`#${id} img`);
+let i=0;
+slides.forEach((img,index)=>{
+if(img.classList.contains("active")) i=index;
+img.classList.remove("active");
+});
+slides[(i-1+slides.length)%slides.length].classList.add("active");
+}
+</script>
+
+</body>
+</html>
