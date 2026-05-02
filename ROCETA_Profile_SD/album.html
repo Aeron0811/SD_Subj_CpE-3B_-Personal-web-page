@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Album - Dennise Roceta</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+      color: #e0d6c3;
+      overflow-x: hidden;
+    }
+
+    /* VIDEO BACKGROUND */
+    .video-bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .video-bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.45) contrast(1.2);
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 10;
+    }
+
+    .nav a {
+      padding: 10px 25px;
+      border-radius: 25px;
+      border: 1px solid #c9b37a;
+      color: #c9b37a;
+      text-decoration: none;
+      font-size: 0.9em;
+      letter-spacing: 2px;
+      transition: 0.3s ease;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+    }
+
+    .nav a:hover {
+      background: linear-gradient(to bottom, #d4af37, #7a5c00);
+      color: black;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+    }
+
+    /* CONTAINER */
+    .container {
+      padding-top: 120px;
+      padding-bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+    }
+
+    h1 {
+      background: linear-gradient(to bottom, #f5d27a, #d4af37, #7a5c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 3px;
+    }
+
+    /* ENTRY */
+    .entry {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      width: 80%;
+      max-width: 1100px;
+      background: rgba(0,0,0,0.65);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(139,0,0,0.25);
+    }
+
+    /* SINGLE IMAGE */
+    .entry img {
+      width: 420px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: contain;
+      background: rgba(0,0,0,0.3);
+      padding: 5px;
+    }
+
+    .desc {
+      flex: 1;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .label {
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 18px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    /* DOUBLE IMAGES */
+    .double-img {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .double-img img {
+      width: 200px;
+      height: 420px;
+      object-fit: contain;
+      background: rgba(0,0,0,0.3);
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="hotd.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+
+    <h1>MY ALBUM</h1>
+
+    <div class="entry">
+      <img src="keith.png">
+      <div class="desc">
+        <span class="label">Gerald Keith</span><br>
+        This is my boyfriend, Gerald Keith. He's a Geodetic Engineering student. We’ve been together since June 2025, and I’ve never been happier since.
+      </div>
+    </div>
+
+    <div class="entry">
+      <img src="mama.png">
+      <div class="desc">
+        <span class="label">My Mother</span><br>
+        This is my mother, Eden. She's currently living in Athens, Greece because she works there. She may not be always with us, but she makes sure we're well taken care of.
+      </div>
+    </div>
+
+    <div class="entry">
+      <img src="papa.png">
+      <div class="desc">
+        <span class="label">My Father</span><br>
+        This is my father, Jayson. We also don't live together but he still tries to be present in our lives.
+      </div>
+    </div>
+
+    <div class="entry">
+      <img src="shan.png">
+      <div class="desc">
+        <span class="label">Grace Shantel</span><br>
+        This is my sister and my best friend, Grace Shantel. We always got each other's back since we were kids and we're inseperable.
+      </div>
+    </div>
+
+    <div class="entry">
+      <img src="dj.png">
+      <div class="desc">
+        <span class="label">Dan Joseph</span><br>
+        This is my brother, Dan Joseph. He can be a bit playful, but he’s kind at heart.
+      </div>
+    </div>
+
+    <div class="entry">
+      <img src="bffs.png">
+      <div class="desc">
+        <span class="label">My Best Friends</span><br>
+        These are my long-time best friends, Gwen and Jhanna. We’ve been best friends since high school. We may not see each other often, but we always make sure to check in from time to time.
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="double-img">
+        <img src="friends.png">
+        <img src="friends2.png">
+      </div>
+
+      <div class="desc">
+        <span class="label">My College Friends</span><br>
+        These are my college friends — we help each other all the time, they’re always fun to be with, and they make every day in school lighter and more memorable.
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
