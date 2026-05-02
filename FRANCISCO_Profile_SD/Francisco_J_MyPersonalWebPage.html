@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jericho M. Francisco | Portfolio</title>
+    <link rel="icon" type="image/jpeg" href="FB_IMG_1735550253794.jpg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #f4f4f9;
+            background-color: #050505;
+            min-width: 1000px; 
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            z-index: -1; 
+            background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop');
+            background-size: 150% 150%; 
+            animation: panBackground 40s ease-in-out infinite alternate;
+            filter: brightness(0.6);
+        }
+
+        @keyframes panBackground {
+            0%   { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        .layout-wrapper {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            gap: 50px;
+            align-items: flex-start; 
+            flex-wrap: nowrap;
+        }
+
+        .sidebar {
+            width: 32%;
+            flex-shrink: 0;
+            position: sticky;
+            top: 40px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ── MERGED: site title now lives INSIDE profile container ── */
+        .profile-container {
+            text-align: center;
+            background: rgba(15, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .site-title {
+            text-transform: uppercase;
+            font-size: 18px;
+            letter-spacing: 3px;
+            color: #ffffff; 
+            text-shadow: 0 0 15px rgba(139, 184, 255, 0.8); 
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 15px;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .sidebar-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .sidebar-nav a:hover {
+            background: rgba(139, 184, 255, 0.2);
+            border: 1px solid rgba(139, 184, 255, 0.5);
+            color: #8bb8ff;
+            transform: translateY(-2px); 
+        }
+
+        .main-content {
+            width: 68%;
+            flex-shrink: 0;
+        }
+
+        .glass-panel {
+            background: rgba(15, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
+        h2 {
+            font-weight: 300;
+            font-size: 14px;
+            color: #b0b0c0;
+            margin-top: 0;
+        }
+        h3 {
+            color: #e0e0ff;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            margin-top: 0; 
+        }
+        a {
+            color: #8bb8ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        a:hover {
+            color: #ffffff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        td {
+            padding: 20px 0;
+            vertical-align: middle;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .media-cell {
+            text-align: right;
+            width: 60%;
+        }
+        .text-cell {
+            width: 40%;
+            font-size: 18px;
+            font-weight: 600;
+            padding-right: 20px;
+        }
+
+        .media-cell img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            display: block;
+        }
+
+        .dual-img-cell {
+            text-align: right;
+            width: 60%;
+        }
+        .dual-img-cell img {
+            width: 47%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            display: inline-block;
+        }
+        .dual-img-cell img:first-child {
+            margin-right: 3%;
+        }
+
+        video {
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            max-width: 100%;
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            background: #ffffff;
+            color: #000000;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        select option {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background: #4a6ee0;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background: #5b7fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-wrapper">
+        
+        <div class="sidebar">
+
+            <!-- ✅ MERGED: MY PERSONAL WEBPAGE is now INSIDE the same box as the profile pic -->
+            <div class="profile-container">
+
+                <div class="site-title">MY PERSONAL WEBPAGE</div>
+
+                <img src="FB_IMG_1735550253794.jpg" alt="Jericho M. Francisco" class="profile-pic"
+                     onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=JF&background=1a3060&color=7fc3ff&size=220&bold=true';">
+                <h1>JERICHO M. FRANCISCO</h1>
+                <h2>Computer Engineering Student | CPE3B</h2>
+                
+                <div class="sidebar-nav">
+                    <a href="#about">About Me</a>
+                    <a href="#skills">Technical Skills</a>
+                    <a href="#hobbies">Hobbies</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            
+            <div id="about" class="glass-panel">
+                <h3>About Me</h3>
+                <p style="line-height: 1.8; font-size: 16px;">
+                    Hello! I am Jericho M. Francisco, 21 years old. I reside in Brgy. Darasa, Tanauan City, Batangas.<br><br>
+                    Currently, I am proudly pursuing my engineering studies at the <b>University of Batangas - Lipa Campus</b>. 
+                    I am passionate about exploring the intersections of hardware and software, focusing on building the future through technology.
+                </p>
+            </div>
+
+            <div id="skills" class="glass-panel">
+                <h3>Technical Skills</h3>
+                <table>
+                    <tr>
+                        <td class="text-cell">Generative AI / Prompting</td>
+                        <td class="media-cell">
+                            <video controls>
+                                <source src="AGENT AND APP.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-cell">Arduino Project Building</td>
+                        <td class="media-cell">
+                            <video controls>
+                                <source src="EXPERIMENT 1.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-cell">Python Coding</td>
+                        <td class="media-cell">
+                            <video controls>
+                                <source src="PY AND INO.mp4" type="video/mp4">
+                            </video>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="hobbies" class="glass-panel">
+                <h3>Hobbies & Interests</h3>
+                <table>
+                    <tr>
+                        <td class="text-cell">
+                            Online Gaming<br>
+                            <span style="font-size: 13px; font-weight: 300; color: #b0b0c0;">(CODM & Mobile Legends)</span>
+                        </td>
+                        <td class="dual-img-cell">
+                            <img src="Mobile-Legends-PC-The-Ultimate-Guide-to-Playing-on-Your-Computer.webp" alt="Mobile Legends">
+                            <img src="cod_launch_tout.webp" alt="CODM">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-cell">Exploring Coffee Shops</td>
+                        <td class="media-cell">
+                            <img src="IMG20241216154330.jpg" alt="Coffee Shops">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-cell">Watching Anime</td>
+                        <td class="media-cell">
+                            <img src="danmachi-fm-battle-chronicle-01-05-23-1-1536x864.jpg" alt="Anime">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="resources" class="glass-panel">
+                <h3>Engineering Resources</h3>
+                <p>Access quick links for computer engineering documentation:</p>
+                
+                <select onChange="if(this.value) window.location.href=this.value" style="margin-bottom: 20px;">
+                    <option value="" disabled selected hidden>-- Select a Resource --</option>
+                    <option value="https://www.arduino.cc/">Arduino Official Documentation</option>
+                    <option value="https://www.python.org/">Python Official Site</option>
+                    <option value="https://chat.openai.com/">ChatGPT (For AI Prompting)</option>
+                </select>
+                <br>
+                <a href="https://www.ub.edu.ph/" target="_blank" style="font-weight: 600;">Visit University of Batangas Website &rarr;</a>
+            </div>
+
+            <div id="contact" class="glass-panel">
+                <h3>Let's Connect</h3>
+                
+                <div style="margin-bottom: 30px;">
+                    <a href="https://www.facebook.com/share/1E6gADRQJH/" target="_blank">Facebook</a> &nbsp;|&nbsp; 
+                    <a href="https://www.instagram.com/echo_jhtba?igsh=MXBnMGdnaXFibmxpcg==" target="_blank">Instagram</a> &nbsp;|&nbsp; 
+                    <a href="https://github.com/2221368-rgb" target="_blank">GitHub</a> &nbsp;|&nbsp;
+                    <a href="mailto:2221368@ub.edu.ph">Email Me</a>
+                </div>
+
+                <form action="mailto:2221368@ub.edu.ph" method="post" enctype="text/plain">
+                    <table style="border: none; margin-top: 0;">
+                        <tr>
+                            <td style="padding: 10px 0; border: none;"><input type="text" name="Name" placeholder="Enter your full name"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 0; border: none;">
+                                <span style="margin-right: 20px;">Gender:</span>
+                                <label style="margin-right: 15px;"><input type="radio" name="Gender" value="Male"> Male</label>
+                                <label><input type="radio" name="Gender" value="Female"> Female</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 0; border: none;">
+                                <span style="margin-right: 20px;">You are a:</span>
+                                <label style="margin-right: 15px;"><input type="checkbox" name="Role" value="Student"> Student</label>
+                                <label><input type="checkbox" name="Role" value="Gamer"> Gamer</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 0; border: none;"><input type="text" name="Message" placeholder="How can I help you?"></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 0; border: none;">
+                                <input type="submit" value="Send Message">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
