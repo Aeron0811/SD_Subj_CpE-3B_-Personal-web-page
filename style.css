@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s ease;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #a0aec0;
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #a0aec0;
+    font-size: 1.2em;
+}
+
+/* --- Typography & Global Elements --- */
+.text-center {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.justify-text {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 30px 0;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* --- About Me Skills Box --- */
+.skills-list-box {
+    background-color: #f0f7ff;
+    border-left: 5px solid #3182ce;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* --- Educational Table --- */
+.styled-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.styled-table th {
+    background-color: #3182ce;
+    color: #ffffff;
+    padding: 18px;
+    font-size: 0.95em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.styled-table td {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #2d3748;
+    background-color: #f8fbff;
+    border-bottom: 1px solid #edf2f7;
+    border-right: 1px solid #edf2f7;
+}
+
+/* Force Year/Status to stay on one line */
+.styled-table th:nth-child(3),
+.styled-table td:nth-child(3) {
+    white-space: nowrap;
+    min-width: 200px;
+}
+
+.styled-table td:last-child {
+    border-right: none;
+}
+
+.styled-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Project Cards --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+/* --- Contact Form --- */
+.contact-form {
+    background-color: #f8fbff;
+    border: 1px solid #e2e8f0;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-group label {
+    display: inline;
+    margin: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* --- Footer & Socials --- */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: #3182ce;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* --- ENHANCED DARK MODE --- */
+body.dark-mode {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+body.dark-mode .container {
+    background-color: #2d3748;
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #ffffff;
+}
+
+/* Table Dark Mode */
+body.dark-mode .styled-table {
+    border-color: #4a5568;
+}
+
+body.dark-mode .styled-table td {
+    background-color: #2d3748;
+    color: #edf2f7;
+    border-color: #4a5568;
+}
+
+body.dark-mode .styled-table b {
+    color: #63b3ed;
+}
+
+/* Light blue text pop */
+body.dark-mode .styled-table i {
+    color: #a0aec0;
+}
+
+/* Project Cards Dark Mode */
+body.dark-mode .project-card {
+    background-color: #1a202c;
+    border-color: #4a5568;
+}
+
+body.dark-mode .project-info h4 {
+    color: #ffffff;
+}
+
+/* Form Dark Mode */
+body.dark-mode .contact-form {
+    background-color: #1a202c;
+    border-color: #4a5568;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #2d3748;
+    color: white;
+    border: 1px solid #4a5568;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+    border-color: #3182ce;
+    outline: none;
+}
+
+body.dark-mode .social-icons a {
+    color: #63b3ed;
+}
+
+/* --- Fine-Tuning Dark Mode Readability --- */
+body.dark-mode .styled-table td i {
+    color: #cbd5e0;
+    /* Makes "S.Y. 2023 - Present" slightly brighter */
+}
+
+body.dark-mode .contact-form label {
+    color: #edf2f7;
+    /* Ensures labels like "Name" and "I am a:" are bright */
+}
+
+body.dark-mode .skills-list-box a {
+    color: #63b3ed;
+    /* Makes links in the blue box stand out more */
+}
+
+body.dark-mode .skills-list-box {
+    background-color: #1e3a8a;
+    /* Darker blue background for better contrast with light text */
+    color: #ffffff;
+}
+
+/* Styling para sa label sa taas ng 1,2,3 */
+.toc-label {
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a5568;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+/* Siguraduhin na ang box ay laging kita */
+.skills-list-box {
+    background-color: #f0f7ff;
+    /* Light blue box */
+    padding: 20px 30px;
+    border-radius: 12px;
+    border-left: 6px solid #3182ce;
+    /* Blue vertical line */
+    margin-bottom: 30px;
+}
+
+/* Dark Mode Support para hindi maging transparent */
+body.dark-mode .skills-list-box {
+    background-color: #2c5282;
+    /* Solid dark blue para sa dark mode */
+    border-color: #63b3ed;
+}
+
+body.dark-mode .toc-label,
+body.dark-mode .skills-list-box li a {
+    color: #ffffff;
+    /* Puti para malinaw basahin */
+}
+
