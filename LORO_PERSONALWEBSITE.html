@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benize Leigh Loro | CPE3B Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lexend:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #ffb347; --bg: #0f0c29; }
+        body { 
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+            color: #f0f0f0; 
+            font-family: 'Lexend', sans-serif; 
+            scroll-behavior: smooth; 
+        }
+        h1, h2, h3 { font-family: 'Cinzel', serif; }
+
+        .grid-bg {
+            background-image: linear-gradient(rgba(255, 179, 71, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 179, 71, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: fixed; inset: 0; z-index: -1;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover { 
+            border-color: var(--accent); 
+            background: rgba(255, 179, 71, 0.05);
+            transform: translateY(-8px);
+        }
+
+        /* Feature: Skill Hover Reveal */
+        .skill-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+        .glass-card:hover .skill-content { max-height: 100px; margin-top: 10px; }
+
+        /* Feature: Table Highlighting */
+        tr td { transition: all 0.3s; cursor: pointer; border: 1px solid transparent; }
+        tr:hover td { background: rgba(255, 179, 71, 0.15); border-color: var(--accent); color: var(--accent); }
+
+        /* Feature: Floating Navigation */
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -5px; left: 0; background: var(--accent); transition: width 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        input, textarea, select {
+            background: rgba(0,0,0,0.4) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            color: white !important;
+            border-radius: 15px !important;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="grid-bg"></div>
+
+    <nav class="fixed top-0 w-full z-50 px-8 py-5 flex justify-between items-center backdrop-blur-2xl border-b border-white/10">
+        <div class="text-2xl font-black tracking-tighter italic text-transparent bg-clip-text bg-gradient-to-r from-white to-[#ffb347]">BLL</div>
+        <div class="hidden md:flex space-x-8 text-[11px] font-bold tracking-[0.2em] uppercase">
+            <a href="#about" class="nav-link hover:text-[#ffb347]">About</a>
+            <a href="#family" class="nav-link hover:text-[#ffb347]">Socials</a>
+            <a href="#skills" class="nav-link hover:text-[#ffb347]">Skills</a>
+            <a href="#schedule" class="nav-link hover:text-[#ffb347]">My Week</a>
+            <a href="#contact" class="px-6 py-2 bg-[#ffb347] text-black rounded-full font-black hover:scale-105 transition">Contact</a>
+        </div>
+    </nav>
+
+    <header id="about" class="min-h-screen flex items-center px-8 lg:px-24 pt-20">
+        <div class="grid lg:grid-cols-2 gap-16 items-center w-full">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <span class="w-12 h-[1px] bg-[#ffb347]"></span>
+                    <span class="text-[11px] tracking-[0.4em] text-[#ffb347] uppercase font-bold">CPE3B </span>
+                </div>
+                <h1 class="text-6xl lg:text-8xl font-black leading-none mb-6">BENIZE LEIGH <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ffb347] to-[#ffcc33]">LORO</span></h1>
+                <p class="text-gray-300 text-lg max-w-lg mb-10 leading-relaxed font-light">
+                    Hi! Welcome to my website! I'm Benize Leigh Loro, a passionate Computer Engineering student at University of Batangas. This is my personal space to share my projects, skills, and a bit about my life. Feel free to explore and connect with me!
+                </p>
+                <div class="flex space-x-6">
+                    <div class="text-center" onclick="alert('4 Major Projects Completed!')">
+                        <div class="text-4xl font-bold text-[#ffb347]">04</div>
+                        <div class="text-[9px] uppercase tracking-widest text-gray-500">Projects</div>
+                    </div>
+                    <div class="w-[1px] h-10 bg-white/10"></div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-[#ffb347]">100%</div>
+                        <div class="text-[9px] uppercase tracking-widest text-gray-500">Vibes</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group p-4 cursor-zoom-in">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#ffb347] to-transparent rounded-[3rem] opacity-20 blur-2xl"></div>
+                <img src="54cf84dc-c9bf-498a-b23c-231afe5bc061.png" alt="Benize" class="relative rounded-[3rem] border border-white/20 w-full shadow-2xl transition duration-500 group-hover:rotate-2">
+            </div>
+        </div>
+    </header>
+
+    <section id="family" class="py-24 px-8 lg:px-24">
+        <h2 class="text-4xl font-bold mb-16 italic text-center tracking-tighter">The Inner Circle</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="glass-card p-6 rounded-[3rem] group" onclick="alert('Family Photo')">
+                <div class="overflow-hidden rounded-[2.5rem] mb-6">
+                    <img src="b01e5acb-2289-4f01-b4e9-205f37aa954c.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="text-2xl font-bold px-4 mb-2">My Family</h3>
+                <p class="text-gray-400 text-sm px-4">They are my backbone and my greatest supporters in this engineering journey.</p>
+            </div>
+            <div class="glass-card p-6 rounded-[3rem] group" onclick="alert('Precious Friends')">
+                <div class="overflow-hidden rounded-[2.5rem] mb-6">
+                    <img src="e9eaa27b-a974-416f-ae3f-55d396275cfc.png" class="w-full h-72 object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="text-2xl font-bold px-4 mb-2">My friends</h3>
+                <p class="text-gray-400 text-sm px-4">These are the people whom I share my experiences with!</p>
+            </div>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 gap-12">
+            <div class="glass-card p-6 rounded-[3rem] group text-center" onclick="alert('The LOML')">
+                <div class="overflow-hidden rounded-[2.5rem] mb-6 mx-auto">
+                    <img src="fd7e9387-f79e-483f-95bd-a39d2ce2e4d0.png" class="w-full h-96 object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="text-3xl font-black text-[#ffb347] mb-2 italic">The LOML and his family</h3>
+                <p class="text-gray-300 font-light italic pb-4">"They makes my life full of hope and happiness!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-8 lg:px-24 bg-black/30">
+        <h2 class="text-3xl font-bold mb-16 text-center text-[#ffb347] tracking-widest uppercase">Expertise Hub</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="glass-card p-8 rounded-3xl text-center">
+                <div class="text-5xl mb-4">🌐</div>
+                <h4 class="font-bold uppercase text-[11px] tracking-widest text-[#ffb347]">Web Design</h4>
+                <div class="skill-content text-[10px] text-gray-400">This is my second time around making websites, hope to find it soon as a hobby.</div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl text-center">
+                <div class="text-5xl mb-4">💻</div>
+                <h4 class="font-bold uppercase text-[11px] tracking-widest text-[#ffb347]">Coding and Hardware</h4>
+                <div class="skill-content text-[10px] text-gray-400">Deep diving into C++, Python, and Arduino for hardware-level control. I have done several projects in this domain.</div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl text-center">
+                <div class="text-5xl mb-4">🎵</div>
+                <h4 class="font-bold uppercase text-[11px] tracking-widest text-[#ffb347]">Music</h4>
+                <div class="skill-content text-[10px] text-gray-400">Been into bands before as a vocalist! This is also how my loml and me connected through music.</div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl text-center">
+                <div class="text-5xl mb-4">💅</div>
+                <h4 class="font-bold uppercase text-[11px] tracking-widest text-[#ffb347]">Nails</h4>
+                <div class="skill-content text-[10px] text-gray-400">My savior in college help me provide things I cannot provide before. (ps: Sometimes a student and somtimes a nail tech!)</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="py-24 px-8 lg:px-24">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="text-3xl font-bold italic border-l-4 border-[#ffb347] pl-6 uppercase tracking-tighter">The Weekly Schedule</h2>
+            <span class="text-[10px] text-gray-500 uppercase tracking-widest">Click cells to highlight</span>
+        </div>
+        <div class="overflow-x-auto glass-card rounded-[2rem] p-4">
+            <table class="w-full">
+                <thead>
+                    <tr>
+                        <th class="p-6 text-left text-[#ffb347] uppercase text-[10px] tracking-widest">Shift</th>
+                        <th class="p-6 text-[#ffb347] text-[10px]">Mon</th><th class="p-6 text-[#ffb347] text-[10px]">Tue</th>
+                        <th class="p-6 text-[#ffb347] text-[10px]">Wed</th><th class="p-6 text-[#ffb347] text-[10px]">Thu</th>
+                        <th class="p-6 text-[#ffb347] text-[10px]">Fri</th><th class="p-6 text-[#ffb347] text-[10px]">Sat</th>
+                        <th class="p-6 text-[#ffb347] text-[10px]">Sun</th>
+                    </tr>
+                </thead>
+                <tbody class="text-[11px]">
+                    <tr class="border-t border-white/5">
+                        <td class="p-6 font-bold text-[#ffb347]">AM</td>
+                        <td>Classes</td><td>Workout</td><td>Classes</td><td>Classes</td><td>On-site Class</td><td>On-site Class</td><td>Church</td>
+                    </tr>
+                    <tr class="border-t border-white/5">
+                        <td class="p-6 font-bold text-[#ffb347]">PM</td>
+                        <td>Study</td><td>Lab</td><td>Group</td><td>Project</td><td>On-site Class</td><td>On-site Class</td><td>Family</td>
+                    </tr>
+                    <tr class="border-t border-white/5">
+                        <td class="p-6 font-bold text-[#ffb347]">EVE</td>
+                        <td>Netflix</td><td>Online Class</td><td>Walking</td><td>Online Class</td><td>Walking</td><td>Activities</td><td>Rest</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="py-24 px-8 lg:px-24">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="glass-card p-10 rounded-[3rem]">
+                <h3 class="font-bold mb-6 text-sm text-[#ffb347] tracking-[0.3em] uppercase">My Favorite Music</h3>
+                <audio controls class="w-full grayscale brightness-200">
+                    <source src="Jim Brickman, Martina McBride - My Valentine (Lyrics).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="glass-card p-6 rounded-[3rem] overflow-hidden">
+                <h3 class="font-bold ml-4 mb-6 text-sm text-[#ffb347] tracking-[0.3em] uppercase">My Creations</h3>
+                <video controls class="w-full rounded-[2rem] border border-white/10">
+                    <source src="FINAL_GROUP5_GIC_PODCAST - Trim.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-8 lg:px-24">
+        <div class="max-w-4xl mx-auto glass-card p-12 rounded-[4rem]">
+            <h2 class="text-center text-5xl font-black mb-4 italic tracking-tighter">Send a Wave ✨</h2>
+            <form onsubmit="sendMessage(event)" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Your Name" class="p-5 w-full focus:ring-2 focus:ring-[#ffb347]" required>
+                    <input type="email" placeholder="Email Address" class="p-5 w-full focus:ring-2 focus:ring-[#ffb347]" required>
+                </div>
+                <select class="p-5 w-full">
+                    <option value="">What's this about?</option>
+                    <option>CPE Study Group</option>
+                    <option>Project Collab</option>
+                    <option>Just Saying Hi!</option>
+                </select>
+                <textarea rows="5" placeholder="Write something sweet..." class="p-5 w-full focus:ring-2 focus:ring-[#ffb347]" required></textarea>
+                <button type="submit" class="w-full py-5 bg-gradient-to-r from-[#ffb347] to-[#ffcc33] text-black font-black uppercase tracking-[0.4em] rounded-2xl hover:shadow-[0_0_40px_rgba(255,179,71,0.5)] transition duration-500">
+                    Submit Transmission
+                </button>
+            </form>
+
+            <div class="mt-20 flex flex-wrap justify-center gap-12 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">
+                <a href="mailto:benizeloro1105@gmail.com" class="hover:text-[#ffb347] transition">benizeloro1105@gmail.com</a>
+                <a href="#" class="hover:text-[#ffb347] transition">LinkedIn</a>
+                <span class="text-gray/20">0927-399-7824</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function sendMessage(event) {
+            event.preventDefault();
+            const name = event.target.querySelector('input[type="text"]').value;
+            alert(`Yay ${name}! Message sent! I'll reply to you soon! 💕`);
+            event.target.reset();
+        }
+        
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-3');
+                nav.style.backgroundColor = "rgba(15, 12, 41, 0.95)";
+            } else {
+                nav.classList.remove('py-3');
+                nav.style.backgroundColor = "transparent";
+            }
+        });
+    </script>
+</body>
+</html>
