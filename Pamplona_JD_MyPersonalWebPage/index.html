@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Derrick's Webpage </title>
+    <link rel="icon" href="pictures/tab_icon.jpg" type="image/jpg">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/home_page.css">
+    <link rel="stylesheet" href="styles/about_me_page.css">
+    <link rel="stylesheet" href="styles/achievements_page.css">
+    <link rel="stylesheet" href="styles/socials_page.css">
+    <link rel="stylesheet" href="styles/cpe_dump_page.css">
+  </head>
+  <body>
+
+    <header class="header">
+      <nav class="navbar">
+        <a href="#home" class="navLink">Home</a>
+        <a href="#about-me" class="navLink">About Me</a>
+        <a href="#achievements" class="navLink">Achievements</a>
+        <a href="#cpe-dump" class="navLink">CPE Dump</a>
+        <a href="#socials" class="navLink">Socials</a>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div class="home-page">
+          <h1>Hi, I am <strong class="name">Jan Derrick</strong></h1>
+        <div class="intro">
+          <p>A <em>Third-Year Computer Engineering</em> Student</p>
+          <p>At University of Batangas Lipa Campus</p>
+        </div>
+        <div class="about-me-div">
+          <button class="about-me-btn">
+            <a href="#about-me">About Me</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-me">
+      <div class="about-me-page">
+        <h1>About Me</h1>
+        
+        <div class="about-me-grid">
+          
+          <div class="about-me-pic-div">
+            <img class="me-pic" src="pictures/Me.jpg" alt="Picture of Derrick">
+          </div>
+
+          <div class="about-me-content">
+            <div><b>Name:</b> Jan Derrick L. Pamplona</div>
+            <div><b>Age:</b> 21 Years Old</div>
+            <div><b>Address:</b> Janopol Oriental, Tanauan City, Batangas</div>
+            <div><b>Program:</b> Bachelor of Science in Computer Engineering</div>
+          </div>
+          <div class="button-section">
+            <a href="#more-about-me">
+              <button class="more-button">More About Me</button>
+            </a>
+            <a href="#hobbies">
+              <button class="more-button">Hobbies</button>
+            </a>
+            <a href="#skills">
+              <button class="more-button">Skills</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="modals">
+        <div id="more-about-me" class="modal-overlay">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span> More About Me</span>
+              <a href="#about-me" class="close-btn">[ x ]</a>
+            </div>
+            <div class="modal-body">
+              <p class="more-about-me-body">
+                I have a strong interest and curiosity in technology and programming and I am always eager to learn new things in various of fields. I enjoy working on projects that challenge my problem-solving skills and allow me to apply my knowledge in practical ways. These are the catalysts for choosing <b>Computer Engineering</b> and I also want to be a part of the <em>ever-evolving world of technology</em>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="hobbies" class="modal-overlay">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span> Hobbies</span>
+              <a href="#about-me" class="close-btn">[ x ]</a>
+            </div>
+            <div class="modal-body">
+              <ul class="hobbies-list">
+                <li>Reading</li>
+                <li>Eating</li>
+                <li>Sleeping</li>
+                <li>Exploring things</li>
+                <li>Watching Movies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="skills" class="modal-overlay">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span> Skills</span>
+              <a href="#about-me" class="close-btn">[ x ]</a>
+            </div>
+            <div class="modal-body">
+              <ol class="skill-list">
+                <li>Programming
+                  <ul>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                    <li>C++</li>
+                  </ul>
+                </li>
+                <li>Web Development
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                  </ul>
+                </li>
+                <li>Problem Solving</li>
+                <li>Critical Thinking</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="achievements">
+      <div class="achievements-page">
+        <h1>Achievements</h1>
+        <div class="card-container">
+          <div class="card">
+            <p>🎉 Honor student from elementary to high school</p>
+          </div>
+          <div class="card">
+            <p>❤️‍🔥 Doing things that is unknown to me or what I fear</p>
+          </div>
+          <div class="card">
+            <p>🧐 Consistent Dean's Lister</p>
+          </div>
+          <div class="card">
+            <p>🤖 Learned new programming languages</p>
+          </div>
+          <div class="card">
+            <p>💪🏻 Overcame challenges and pushed my limits</p>
+          </div>
+          <div class="card">
+            <p>🥳 Working on this webpage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cpe-dump">
+      <h1>CPE Dump</h1>
+      <div class="cpe-dump-container">
+        <div class="scroll-wrapper">
+          <!-- ORIGINAL SET -->
+          <video class="media-item portrait" autoplay muted loop>
+            <source src="videos/MOR-defense.mp4">
+          </video>
+          <video class="media-item landscape" autoplay muted loop>
+            <source src="videos/Me-video.mp4">
+          </video>
+          <img src="pictures/DrugstorePOS.png" alt="Drugstore POS System" class="media-item landscape">
+          <img src="pictures/code.png" alt="Code Picture" class="media-item landscape">
+          <img src="pictures/24-sec.png" alt="24-seconds Shot Clock Schematic" class="media-item landscape">
+      
+          <video class="media-item portrait" autoplay muted loop>
+            <source src="videos/MOR-defense.mp4">
+          </video>
+          <video class="media-item landscape" autoplay muted loop>
+            <source src="videos/Me-video.mp4">
+          </video>
+          <img src="pictures/DrugstorePOS.png" alt="Drugstore POS System" class="media-item landscape">
+          <img src="pictures/code.png" alt="Code Picture" class="media-item landscape">
+          <img src="pictures/24-sec.png" alt="24-seconds Shot Clock Schematic" class="media-item landscape">
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="socials">
+      <div class="socials-page">
+        <h1>Connect With Me</h1>
+        <div class="socials-grid">
+
+          <a href="https://www.facebook.com/JajanDerrick/" target="_blank" class="social-card">
+            <div class="icon-box">
+              <img src="pictures/social_icons/facebook.svg" alt="Facebook Logo">
+            </div>
+            <span class="social-name">Jan Derrick Pamplona</span>
+          </a>
+
+          <a href="https://github.com/JanDerrick" target="_blank" class="social-card">
+            <div class="icon-box">
+              <img src="pictures/social_icons/github.svg" alt="GitHub Logo">
+            </div>
+            <span class="social-name">JanDerrick</span>
+          </a>
+
+          <a href="mailto:pamplonajanderrick@gmail.com" target="_blank" class="social-card">
+            <div class="icon-box">
+              <img src="pictures/social_icons/gmail.svg" alt="Gmail Logo">
+            </div>
+            <span class="social-name">pamplonajanderrick@gmail.com</span>
+          </a>
+
+          <div class="social-card">
+            <div class="icon-box">
+              <img src="pictures/social_icons/telephone.gif" alt="telephone gif">
+            </div>
+            <span class="social-name">+63 912 345 6789</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>
