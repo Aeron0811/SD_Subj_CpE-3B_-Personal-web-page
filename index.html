@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dennise Roceta - House of the Dragon</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+      color: #e0d6c3;
+      text-align: center;
+
+      /* FIX: lock screen, no scroll */
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* VIDEO BACKGROUND */
+    .video-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+    }
+
+    .video-bg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.45) contrast(1.2);
+    }
+
+    /* MAIN LAYOUT */
+    .overlay {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      gap: 1.2vh;
+      padding: 2vh 2vw;
+      box-sizing: border-box;
+    }
+
+    /* 🔥 SIGIL (LARGER) */
+    .sigil-img {
+      width: clamp(80px, 10vw, 120px); /* increased size */
+      margin-bottom: 0.5vh;
+      opacity: 0.9;
+      filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+    }
+
+    /* PROFILE IMAGE */
+    .profile-img {
+      width: clamp(200px, 22vw, 300px);
+      margin-bottom: 1vh;
+      filter:
+        drop-shadow(0 0 20px rgba(0, 0, 0, 0.9))
+        drop-shadow(0 0 12px rgba(212, 175, 55, 0.4));
+    }
+
+    /* NAME */
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      letter-spacing: 3px;
+      margin: 0.5vh 0;
+
+      background: linear-gradient(to bottom, #f5d27a, #d4af37, #7a5c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      text-shadow:
+        0 0 10px rgba(212, 175, 55, 0.5),
+        0 0 25px rgba(0, 0, 0, 0.9);
+    }
+
+    /* TABS */
+    .tabs {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tab {
+      padding: 9px 20px;
+      border-radius: 25px;
+      border: 1px solid #c9b37a;
+      color: #c9b37a;
+      text-decoration: none;
+      font-size: 0.85em;
+      letter-spacing: 2px;
+      transition: 0.3s ease;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+    }
+
+    .tab:hover {
+      background: linear-gradient(to bottom, #d4af37, #7a5c00);
+      color: black;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
+    }
+
+    /* DESCRIPTION */
+    p {
+      max-width: 600px;
+      font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+      line-height: 1.5;
+      margin: 0.5vh 0;
+    }
+
+    /* 🩸 FIRE AND BLOOD (BOLDER + BIGGER) */
+    .sigil-text {
+      margin-top: 1vh;
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      letter-spacing: 6px;
+      font-weight: 900; /* 🔥 BOLD */
+      color: #8b0000;
+
+      text-shadow:
+        0 0 10px rgba(139, 0, 0, 0.9),
+        0 0 20px rgba(139, 0, 0, 0.7),
+        0 0 30px rgba(0, 0, 0, 0.9);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- VIDEO -->
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="hotd.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="overlay">
+
+    <img src="targaryen-sigil.png" class="sigil-img" alt="Targaryen Sigil">
+
+    <img src="denn-index.png" class="profile-img" alt="Dennise Image">
+
+    <h1>DENNISE ROCETA</h1>
+
+    <div class="tabs">
+      <a href="about.html" class="tab">ABOUT</a>
+      <a href="album.html" class="tab">ALBUM</a>
+      <a href="contact.html" class="tab">CONTACT</a>
+    </div>
+
+    <p>
+      Welcome to my personal website. Inspired by the legacy of House Targaryen,
+      this space reflects my passion, creativity, and fire within.
+    </p>
+
+    <div class="sigil-text">FIRE AND BLOOD</div>
+
+  </div>
+
+</body>
+</html>
